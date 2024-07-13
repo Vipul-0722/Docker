@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  postgres: # one conatiner
+    image: postgres # will come form hub.docker.com
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgre
+      POSTGRES_DB: review
+      POSTGRES_PASSWORD: password
+
+  redis: # second conatiner
+    image: redis # will come form hub.docker.com
+    ports:
+      - "6379:6379"
+
